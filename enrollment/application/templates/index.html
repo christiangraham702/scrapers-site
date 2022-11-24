@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Home</h1>
+                <p>skrape is a web scraping tool that allows you to scrape data from websites and save it to a database.</p>
+                <p>It is built using Python, Flask, and Bootstrap.</p>
+                <p>It is currently in development.</p>
+            </div>
+        </div>
+    </div>
+    {% include "includes/footer.html" %}
+{% endblock %}
+<!-- <div class="row">
+    <div class="col-md-12 text-center">
+        <h1>skrape</h1>
+        {% if login %}
+        <h3>LOGGED IN HOME PAGE</h3>
+        {% else %}
+        <p>LOGIN PAGE <a href="{{ url_for('login') }}"">Login</a></p>
+        {% endif %}
+    </div>
+</div> -->
+
+
+

@@ -1,0 +1,13 @@
+    <header>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link {% if index %}active{% endif %}">Home</a></li>
+                <li class="nav-item"><a href="{{ url_for('scrape') }}" class="nav-link {% if scrape %}active{% endif %}">SCRAPE</a></li>
+                <li class="nav-item"><a href="{{ url_for('get_data') }}" class="nav-link {% if get_data %}active{% endif %}">GET DATA</a></li>
+                <li class="nav-item"><a href="{{ url_for('stats') }}" class="nav-link {% if stats %}active{% endif %}">STATS</a></li>
+                <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %}active{% endif %}">LOGIN</a></li>
+                <li class="nav-item"><a href="{{ url_for('jobs') }}" class="nav-link {% if job_data %}active{% endif %}">JOBS</a></li>
+            </ul>
+        </nav>
+        <hr style="clear:both">
+    </header>

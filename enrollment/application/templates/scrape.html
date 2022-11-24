@@ -1,0 +1,21 @@
+
+    {% extends "layout.html" %}
+   
+    {% block content %}
+    <h2>Start a scraper</h2>
+
+    <div class="container">
+        <form name="register" action="register.php" method="get">
+            <label for="username"><b>website</b></label>
+            <input type="text" placeholder="website" name="username" required>
+            <br>
+            <label for="email"><b>query</b></label>
+            <input type="text" placeholder="Query/search for website" name="email" required>
+            <br>
+            <label for="password"><b>Dont know yet</b></label>
+            <input type="password" placeholder="do something" name="password" required>
+            <br class="clear">
+            <input class="btn-submit" type="submit" name="submit">
+        </form>
+    </div>
+    {% endblock %}
