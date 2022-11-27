@@ -1,7 +1,7 @@
     {% extends "layout.html" %}
     
     {% block content %}
-    <h2>Past jobs</h2>
+    <h2>Spider: {{ spider }}</h2>
 
     <!--  Display the Term and Year here --->
     <!-- <h3>Term: Spring 2019</h3> -->
@@ -25,10 +25,18 @@
                 <td scope='row'>{{ data["jobID"] }}</td>
                 <td>{{ data["website"] }}</td>
                 <td>{{ data["query"] }}</td>
-                <td>{{ data["items"] }}</td>
+                <td>{{ data["item_count"] }}</td>
                 <td>{{ data["date"] }}/td>
                 <td>
+                    <form action="{{ url_for('send_data') }}" method="POST">
+                        <input type="hidden" name="jobID" value="{{ data['jobID'] }}">
+                        <input type="hidden" name="website" value="{{ data['website'] }}">
+                        <input type="hidden" name="query" value="{{ data['query'] }}">
+                        <input type="hidden" name="item_count" value="{{ data['item_count'] }}">
+                        <input type="hidden" name="spider" value="{{ spider }}">
+                        <input type="hidden" name="date" value="{{ data['date'] }}">
                     <button>Email me</button>
+                    </form>
                 </td>
             </tr>
             {% endfor %}
